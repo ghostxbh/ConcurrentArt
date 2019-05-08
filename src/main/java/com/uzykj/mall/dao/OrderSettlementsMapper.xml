@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uzykj.mall.dao.OrderSettlementsMapper">
+  <resultMap id="BaseResultMap" type="com.uzykj.mall.pojo.OrderSettlements">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="settlement_no" jdbcType="VARCHAR" property="settlementNo" />
+    <result column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="seller_id" jdbcType="INTEGER" property="sellerId" />
+    <result column="acc_name" jdbcType="VARCHAR" property="accName" />
+    <result column="acc_no" jdbcType="VARCHAR" property="accNo" />
+    <result column="acc_user" jdbcType="VARCHAR" property="accUser" />
+    <result column="order_money" jdbcType="DECIMAL" property="orderMoney" />
+    <result column="settlement_money" jdbcType="DECIMAL" property="settlementMoney" />
+    <result column="total_commission" jdbcType="DECIMAL" property="totalCommission" />
+    <result column="poundage_money" jdbcType="DECIMAL" property="poundageMoney" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="is_finish" jdbcType="CHAR" property="isFinish" />
+    <result column="finish_time" jdbcType="TIMESTAMP" property="finishTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, settlement_no, order_id, seller_id, acc_name, acc_no, acc_user, order_money, 
+    settlement_money, total_commission, poundage_money, create_time, is_finish, finish_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from order_settlements
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from order_settlements
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.uzykj.mall.pojo.OrderSettlements">
+    insert into order_settlements (id, settlement_no, order_id, 
+      seller_id, acc_name, acc_no, 
+      acc_user, order_money, settlement_money, 
+      total_commission, poundage_money, create_time, 
+      is_finish, finish_time)
+    values (#{id,jdbcType=INTEGER}, #{settlementNo,jdbcType=VARCHAR}, #{orderId,jdbcType=INTEGER}, 
+      #{sellerId,jdbcType=INTEGER}, #{accName,jdbcType=VARCHAR}, #{accNo,jdbcType=VARCHAR}, 
+      #{accUser,jdbcType=VARCHAR}, #{orderMoney,jdbcType=DECIMAL}, #{settlementMoney,jdbcType=DECIMAL}, 
+      #{totalCommission,jdbcType=DECIMAL}, #{poundageMoney,jdbcType=DECIMAL}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{isFinish,jdbcType=CHAR}, #{finishTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.uzykj.mall.pojo.OrderSettlements">
+    insert into order_settlements
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="settlementNo != null">
+        settlement_no,
+      </if>
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="sellerId != null">
+        seller_id,
+      </if>
+      <if test="accName != null">
+        acc_name,
+      </if>
+      <if test="accNo != null">
+        acc_no,
+      </if>
+      <if test="accUser != null">
+        acc_user,
+      </if>
+      <if test="orderMoney != null">
+        order_money,
+      </if>
+      <if test="settlementMoney != null">
+        settlement_money,
+      </if>
+      <if test="totalCommission != null">
+        total_commission,
+      </if>
+      <if test="poundageMoney != null">
+        poundage_money,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="isFinish != null">
+        is_finish,
+      </if>
+      <if test="finishTime != null">
+        finish_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="settlementNo != null">
+        #{settlementNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="sellerId != null">
+        #{sellerId,jdbcType=INTEGER},
+      </if>
+      <if test="accName != null">
+        #{accName,jdbcType=VARCHAR},
+      </if>
+      <if test="accNo != null">
+        #{accNo,jdbcType=VARCHAR},
+      </if>
+      <if test="accUser != null">
+        #{accUser,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        #{orderMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="settlementMoney != null">
+        #{settlementMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="totalCommission != null">
+        #{totalCommission,jdbcType=DECIMAL},
+      </if>
+      <if test="poundageMoney != null">
+        #{poundageMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isFinish != null">
+        #{isFinish,jdbcType=CHAR},
+      </if>
+      <if test="finishTime != null">
+        #{finishTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.uzykj.mall.pojo.OrderSettlements">
+    update order_settlements
+    <set>
+      <if test="settlementNo != null">
+        settlement_no = #{settlementNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderId != null">
+        order_id = #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="sellerId != null">
+        seller_id = #{sellerId,jdbcType=INTEGER},
+      </if>
+      <if test="accName != null">
+        acc_name = #{accName,jdbcType=VARCHAR},
+      </if>
+      <if test="accNo != null">
+        acc_no = #{accNo,jdbcType=VARCHAR},
+      </if>
+      <if test="accUser != null">
+        acc_user = #{accUser,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        order_money = #{orderMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="settlementMoney != null">
+        settlement_money = #{settlementMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="totalCommission != null">
+        total_commission = #{totalCommission,jdbcType=DECIMAL},
+      </if>
+      <if test="poundageMoney != null">
+        poundage_money = #{poundageMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isFinish != null">
+        is_finish = #{isFinish,jdbcType=CHAR},
+      </if>
+      <if test="finishTime != null">
+        finish_time = #{finishTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.uzykj.mall.pojo.OrderSettlements">
+    update order_settlements
+    set settlement_no = #{settlementNo,jdbcType=VARCHAR},
+      order_id = #{orderId,jdbcType=INTEGER},
+      seller_id = #{sellerId,jdbcType=INTEGER},
+      acc_name = #{accName,jdbcType=VARCHAR},
+      acc_no = #{accNo,jdbcType=VARCHAR},
+      acc_user = #{accUser,jdbcType=VARCHAR},
+      order_money = #{orderMoney,jdbcType=DECIMAL},
+      settlement_money = #{settlementMoney,jdbcType=DECIMAL},
+      total_commission = #{totalCommission,jdbcType=DECIMAL},
+      poundage_money = #{poundageMoney,jdbcType=DECIMAL},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      is_finish = #{isFinish,jdbcType=CHAR},
+      finish_time = #{finishTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

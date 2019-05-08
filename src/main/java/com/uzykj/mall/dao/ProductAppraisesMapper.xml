@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uzykj.mall.dao.ProductAppraisesMapper">
+  <resultMap id="BaseResultMap" type="com.uzykj.mall.pojo.ProductAppraises">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="seller_id" jdbcType="INTEGER" property="sellerId" />
+    <result column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="product_score" jdbcType="INTEGER" property="productScore" />
+    <result column="service_score" jdbcType="INTEGER" property="serviceScore" />
+    <result column="time_score" jdbcType="INTEGER" property="timeScore" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="img_paths" jdbcType="VARCHAR" property="imgPaths" />
+    <result column="is_show" jdbcType="CHAR" property="isShow" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, seller_id, order_id, product_id, user_id, product_score, service_score, time_score, 
+    content, img_paths, is_show, createTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product_appraises
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from product_appraises
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.uzykj.mall.pojo.ProductAppraises">
+    insert into product_appraises (id, seller_id, order_id, 
+      product_id, user_id, product_score, 
+      service_score, time_score, content, 
+      img_paths, is_show, createTime
+      )
+    values (#{id,jdbcType=INTEGER}, #{sellerId,jdbcType=INTEGER}, #{orderId,jdbcType=INTEGER}, 
+      #{productId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{productScore,jdbcType=INTEGER}, 
+      #{serviceScore,jdbcType=INTEGER}, #{timeScore,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, 
+      #{imgPaths,jdbcType=VARCHAR}, #{isShow,jdbcType=CHAR}, #{createtime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.uzykj.mall.pojo.ProductAppraises">
+    insert into product_appraises
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sellerId != null">
+        seller_id,
+      </if>
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="productScore != null">
+        product_score,
+      </if>
+      <if test="serviceScore != null">
+        service_score,
+      </if>
+      <if test="timeScore != null">
+        time_score,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="imgPaths != null">
+        img_paths,
+      </if>
+      <if test="isShow != null">
+        is_show,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sellerId != null">
+        #{sellerId,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="productScore != null">
+        #{productScore,jdbcType=INTEGER},
+      </if>
+      <if test="serviceScore != null">
+        #{serviceScore,jdbcType=INTEGER},
+      </if>
+      <if test="timeScore != null">
+        #{timeScore,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="imgPaths != null">
+        #{imgPaths,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null">
+        #{isShow,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.uzykj.mall.pojo.ProductAppraises">
+    update product_appraises
+    <set>
+      <if test="sellerId != null">
+        seller_id = #{sellerId,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null">
+        order_id = #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="productScore != null">
+        product_score = #{productScore,jdbcType=INTEGER},
+      </if>
+      <if test="serviceScore != null">
+        service_score = #{serviceScore,jdbcType=INTEGER},
+      </if>
+      <if test="timeScore != null">
+        time_score = #{timeScore,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="imgPaths != null">
+        img_paths = #{imgPaths,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null">
+        is_show = #{isShow,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.uzykj.mall.pojo.ProductAppraises">
+    update product_appraises
+    set seller_id = #{sellerId,jdbcType=INTEGER},
+      order_id = #{orderId,jdbcType=INTEGER},
+      product_id = #{productId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      product_score = #{productScore,jdbcType=INTEGER},
+      service_score = #{serviceScore,jdbcType=INTEGER},
+      time_score = #{timeScore,jdbcType=INTEGER},
+      content = #{content,jdbcType=VARCHAR},
+      img_paths = #{imgPaths,jdbcType=VARCHAR},
+      is_show = #{isShow,jdbcType=CHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

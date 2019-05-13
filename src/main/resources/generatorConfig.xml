@@ -44,7 +44,7 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table schema="" tableName="article_types" enableCountByExample="false" enableSelectByExample="false"
+        <!--<table schema="" tableName="article_types" enableCountByExample="false" enableSelectByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
 
         <table schema="" tableName="articles" enableCountByExample="false" enableSelectByExample="false"
@@ -114,7 +114,35 @@
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
 
         <table schema="" tableName="user_scores" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>-->
+
+        <table schema="" tableName="as_category" enableCountByExample="false" enableSelectByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="as_comfirm" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="as_expert" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="as_industry" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="as_products" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="ed_category" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="ed_course_users" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="ed_products" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="ed_sections" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="ed_videos" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="expert_audit" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="bk_category" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+        <table schema="" tableName="bk_products" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false"/>
+
 
     </context>
 </generatorConfiguration>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uzykj.mall.dao.BkProductsMapper">
+  <resultMap id="BaseResultMap" type="com.uzykj.mall.pojo.BkProducts">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="cover_image" jdbcType="VARCHAR" property="coverImage" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="current_price" jdbcType="DOUBLE" property="currentPrice" />
+    <result column="stock" jdbcType="INTEGER" property="stock" />
+    <result column="sale_count" jdbcType="INTEGER" property="saleCount" />
+    <result column="details" jdbcType="VARCHAR" property="details" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="publishing" jdbcType="VARCHAR" property="publishing" />
+    <result column="category_code" jdbcType="CHAR" property="categoryCode" />
+    <result column="is_sale" jdbcType="CHAR" property="isSale" />
+    <result column="is_show" jdbcType="CHAR" property="isShow" />
+    <result column="del_flag" jdbcType="CHAR" property="delFlag" />
+    <result column="creater_id" jdbcType="INTEGER" property="createrId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="updater_id" jdbcType="INTEGER" property="updaterId" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, name, title, cover_image, price, current_price, stock, sale_count, details, 
+    author, publishing, category_code, is_sale, is_show, del_flag, creater_id, create_time, 
+    updater_id, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from bk_products
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from bk_products
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.uzykj.mall.pojo.BkProducts">
+    insert into bk_products (id, user_id, name, 
+      title, cover_image, price, 
+      current_price, stock, sale_count, 
+      details, author, publishing, 
+      category_code, is_sale, is_show, 
+      del_flag, creater_id, create_time, 
+      updater_id, update_time)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{coverImage,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, 
+      #{currentPrice,jdbcType=DOUBLE}, #{stock,jdbcType=INTEGER}, #{saleCount,jdbcType=INTEGER}, 
+      #{details,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{publishing,jdbcType=VARCHAR}, 
+      #{categoryCode,jdbcType=CHAR}, #{isSale,jdbcType=CHAR}, #{isShow,jdbcType=CHAR}, 
+      #{delFlag,jdbcType=CHAR}, #{createrId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updaterId,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.uzykj.mall.pojo.BkProducts">
+    insert into bk_products
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="coverImage != null">
+        cover_image,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="currentPrice != null">
+        current_price,
+      </if>
+      <if test="stock != null">
+        stock,
+      </if>
+      <if test="saleCount != null">
+        sale_count,
+      </if>
+      <if test="details != null">
+        details,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="publishing != null">
+        publishing,
+      </if>
+      <if test="categoryCode != null">
+        category_code,
+      </if>
+      <if test="isSale != null">
+        is_sale,
+      </if>
+      <if test="isShow != null">
+        is_show,
+      </if>
+      <if test="delFlag != null">
+        del_flag,
+      </if>
+      <if test="createrId != null">
+        creater_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updaterId != null">
+        updater_id,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="coverImage != null">
+        #{coverImage,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="currentPrice != null">
+        #{currentPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null">
+        #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="saleCount != null">
+        #{saleCount,jdbcType=INTEGER},
+      </if>
+      <if test="details != null">
+        #{details,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="publishing != null">
+        #{publishing,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryCode != null">
+        #{categoryCode,jdbcType=CHAR},
+      </if>
+      <if test="isSale != null">
+        #{isSale,jdbcType=CHAR},
+      </if>
+      <if test="isShow != null">
+        #{isShow,jdbcType=CHAR},
+      </if>
+      <if test="delFlag != null">
+        #{delFlag,jdbcType=CHAR},
+      </if>
+      <if test="createrId != null">
+        #{createrId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null">
+        #{updaterId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.uzykj.mall.pojo.BkProducts">
+    update bk_products
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="coverImage != null">
+        cover_image = #{coverImage,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="currentPrice != null">
+        current_price = #{currentPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null">
+        stock = #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="saleCount != null">
+        sale_count = #{saleCount,jdbcType=INTEGER},
+      </if>
+      <if test="details != null">
+        details = #{details,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="publishing != null">
+        publishing = #{publishing,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryCode != null">
+        category_code = #{categoryCode,jdbcType=CHAR},
+      </if>
+      <if test="isSale != null">
+        is_sale = #{isSale,jdbcType=CHAR},
+      </if>
+      <if test="isShow != null">
+        is_show = #{isShow,jdbcType=CHAR},
+      </if>
+      <if test="delFlag != null">
+        del_flag = #{delFlag,jdbcType=CHAR},
+      </if>
+      <if test="createrId != null">
+        creater_id = #{createrId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null">
+        updater_id = #{updaterId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.uzykj.mall.pojo.BkProducts">
+    update bk_products
+    set user_id = #{userId,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      cover_image = #{coverImage,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DOUBLE},
+      current_price = #{currentPrice,jdbcType=DOUBLE},
+      stock = #{stock,jdbcType=INTEGER},
+      sale_count = #{saleCount,jdbcType=INTEGER},
+      details = #{details,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      publishing = #{publishing,jdbcType=VARCHAR},
+      category_code = #{categoryCode,jdbcType=CHAR},
+      is_sale = #{isSale,jdbcType=CHAR},
+      is_show = #{isShow,jdbcType=CHAR},
+      del_flag = #{delFlag,jdbcType=CHAR},
+      creater_id = #{createrId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      updater_id = #{updaterId,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

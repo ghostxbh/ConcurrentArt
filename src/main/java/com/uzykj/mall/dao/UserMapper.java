@@ -1,7 +1,9 @@
 package com.uzykj.mall.dao;
 
 import com.uzykj.mall.pojo.User;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 

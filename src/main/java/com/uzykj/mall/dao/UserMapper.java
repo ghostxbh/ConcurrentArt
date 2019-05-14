@@ -1,11 +1,13 @@
 package com.uzykj.mall.dao;
 
 import com.uzykj.mall.pojo.User;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
-@Repository
+import java.util.List;
+
+@Mapper
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer id);
+    int deleteOne(String uuid);
 
     int insert(User record);
 
@@ -13,7 +15,11 @@ public interface UserMapper {
 
     User selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(User record);
+    int updateOne(User record);
 
     int updateByPrimaryKey(User record);
+
+    User findOne(String uuid);
+
+    List<User> findAll(Integer page, Integer size);
 }

@@ -27,5 +27,5 @@ spring:
       testOnReturn: false
 
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:/com/uzykj/mall/dao/*Mapper.xml
   type-aliases-package: com.uzykj.mall.pojo

@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.iml
+*.idea
+.DS_Store
+Concurrent/src/com/uzykj/problem/atomic/
+Concurrent/src/com/uzykj/problem/order/
+Zk_Curator/src/test/
+src/test/

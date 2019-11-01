@@ -5,4 +5,6 @@
 Concurrent/src/com/uzykj/problem/atomic/
 Concurrent/src/com/uzykj/problem/order/
 Zk_Curator/src/test/
-src/test/
+Zk_Curator/target/
+Zk_Curator/src/main/java/com/uzykj/cache/
+out/

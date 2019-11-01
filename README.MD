@@ -11,6 +11,10 @@
 
 > 传送门 -> [zk+curator](./Zk_Curator/README.MD)
 
+### DesignPatterns 设计模式
+
+> 传送门 -> [DesignPatterns](./DesignPatterns/README.MD)
+
 ### 更新日志
 
 > 传送门 -> [update_log](./UPDATE_LOG.MD)

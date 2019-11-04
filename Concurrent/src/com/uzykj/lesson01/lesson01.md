@@ -97,8 +97,14 @@ public class RunnableTest implements Runnable {
 + 两种方式都以`start()`启动线程
 
 ## Future和Callable
+参考: [Java多线程-Callable的Future返回值的使用](https://www.cnblogs.com/syp172654682/p/9788051.html)
 
 ### Callable
+
+java5开始，提供了Callable接口，是Runable接口的增强版。
+同样用`Call()`方法作为线程的执行体，增强了之前的`run()`方法。
+因为call方法可以有返回值，也可以声明抛出异常。
+
 **注意**：Callable 是一个泛型接口
 ```java
 public class CallableTest implements Callable<Integer> {
@@ -111,6 +117,10 @@ public class CallableTest implements Callable<Integer> {
 }
 ```
 ### Future
++ 描述：
+java5提供了Future接口来代表Callable接口里的`call()`方法的返回值，
+并为Future接口提供了一个FutureTask实现类，该实现类实现了Future接口，
+并实现了Runnable接口，所以这样可以作为Thread的target。
 
 + 示例：
 ```

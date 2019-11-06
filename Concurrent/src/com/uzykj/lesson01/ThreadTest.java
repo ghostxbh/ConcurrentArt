@@ -17,15 +17,15 @@ public class ThreadTest extends Thread{
     public void run(){
         int i = 0;
         // 不加锁
-//        while(i++ < 20){
-//            System.out.println(Thread.currentThread().getName() + "----" + i + "----" + name + "----" + gender);
-//        }
-        // 加锁
-        synchronized (ThreadTest.class){
-            while(i++ < 20){
-                System.out.println(Thread.currentThread().getName() + "----" + i + "----" + name + "----" + gender);
-            }
+        while(i++ < 20){
+            System.out.println(Thread.currentThread().getName() + "----" + i + "----" + name + "----" + gender);
         }
+        // 加锁
+//        synchronized (ThreadTest.class){
+//            while(i++ < 20){
+//                System.out.println(Thread.currentThread().getName() + "----" + i + "----" + name + "----" + gender);
+//            }
+//        }
     }
 
     public static void main(String[] args) {

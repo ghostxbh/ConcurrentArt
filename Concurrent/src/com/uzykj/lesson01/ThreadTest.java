@@ -1,5 +1,7 @@
 package com.uzykj.lesson01;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by xbh 2019-10-25
  */
@@ -29,10 +31,34 @@ public class ThreadTest extends Thread{
     }
 
     public static void main(String[] args) {
-        ThreadTest A = new ThreadTest("A", "blog");
-        ThreadTest B = new ThreadTest("B", "flag");
+//        ThreadTest A = new ThreadTest("A", "blog");
+//        ThreadTest B = new ThreadTest("B", "flag");
+//
+//        A.start();
+//        B.start();
 
-        A.start();
-        B.start();
+        new TestT1().start();
+        for (int i = 0; i < 10; i++) {
+            try {
+                TimeUnit.MICROSECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("main");
+        }
+    }
+
+    private static class TestT1 extends Thread{
+        @Override
+        public void run() {
+            for (int i = 0; i < 10; i++) {
+                try {
+                    TimeUnit.MICROSECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("TestT1");
+            }
+        }
     }
 }

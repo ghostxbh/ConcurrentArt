@@ -1,4 +1,4 @@
-package com.uzykj.problem.visible;
+package com.uzykj.lesson04;
 
 /**
  * 使用synchronized解决可见性

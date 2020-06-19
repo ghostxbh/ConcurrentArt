@@ -1,4 +1,4 @@
-package com.uzykj.problem.visible;
+package com.uzykj.lesson04;
 
 /**
  * 通过volatile关键字标记内存屏障保证可见性

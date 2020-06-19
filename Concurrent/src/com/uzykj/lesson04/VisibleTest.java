@@ -1,4 +1,4 @@
-package com.uzykj.problem.visible;
+package com.uzykj.lesson04;
 
 /**
  * 可见性问题

@@ -1,6 +1,6 @@
 package com.uzykj.utils;
 
-import com.uzykj.action.RunnableTest;
+import com.uzykj.lesson01.RunnableTest;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

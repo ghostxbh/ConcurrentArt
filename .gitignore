@@ -1,10 +1,30 @@
 # Created by .ignore support plugin (hsz.mobi)
-*.iml
-*.idea
+# system ignore
 .DS_Store
-Concurrent/src/com/uzykj/problem/atomic/
-Concurrent/src/com/uzykj/problem/order/
-Zk_Curator/src/test/
-Zk_Curator/target/
-Zk_Curator/src/main/java/com/uzykj/cache/
-out/
+.idea
+logs
+
+# maven ignore
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.cache
+*.diff
+*.patch
+*.tmp

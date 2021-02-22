@@ -1,20 +1,22 @@
 # Practice
-来自某位大佬的技术分享，个人的学习总结及练习Demo。
+来自某些大佬的技术分享，个人的学习总结及练习Demo。
 
-## 目录
+增强自我技术能力、编码能力、架构能力。
 
-### 并发的艺术
 
-> 传送门 -> [Concurrent](./Concurrent/README.MD)
+## demo篇
+- [SE](uzy-practice-demo/src/main/java/com/uzykj/se/readme.md)
 
-### Zookeeper + Curator
+- [并发](uzy-practice-demo/src/main/java/com/uzykj/concurrent/readme.md)
 
-> 传送门 -> [zk+curator](./Zk_Curator/README.MD)
+- [设计模式](uzy-practice-demo/src/main/java/com/uzykj/dp/readme.md)
 
-### DesignPatterns 设计模式
+- [IO](uzy-practice-demo/src/main/java/com/uzykj/io/readme.md)
 
-> 传送门 -> [DesignPatterns](./DesignPatterns/README.MD)
+- [JVM](uzy-practice-demo/src/main/java/com/uzykj/jvm/readme.md)
 
-### 更新日志
+## 分布式篇
+- [ZooKeeper与Curator](uzy-practice-distributed/readme.md)
 
-> 传送门 -> [update_log](./UPDATE_LOG.MD)
+## 仓库更新时间轴
+- [log](./UPDATE_LOG.MD)

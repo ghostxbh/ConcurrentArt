@@ -15,7 +15,7 @@ public class ConfigProperties {
     // 获取服务列表配置
     public static String getServerConfig() {
         Properties prop = new Properties();
-        InputStream inputStream = ConfigProperties.class.getResourceAsStream("classpath:zookeeper.properties");
+        InputStream inputStream = ConfigProperties.class.getResourceAsStream("/zookeeper.properties");
         try {
             prop.load(inputStream);
             return prop.getProperty("connections");

@@ -128,4 +128,13 @@ public class ZkAction {
     public static List<String> getChildrenData(String path) throws Exception {
         return client.getChildren().watched().forPath(path);
     }
+
+    public static void main(String[] args) throws Exception {
+        if (isExists("/node001")){
+            createData("/node001",CreateMode.PERSISTENT,"{A}");
+        }
+        //delChildrenNode("/node1");
+        String node1 = getData("/node001");
+        System.out.println(node1);
+    }
 }

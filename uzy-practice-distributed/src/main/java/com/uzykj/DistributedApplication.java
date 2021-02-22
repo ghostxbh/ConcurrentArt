@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019-10-31
  */
 @SpringBootApplication
-public class ZkCuratorApplication {
+public class DistributedApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ZkCuratorApplication.class, args);
+        SpringApplication.run(DistributedApplication.class, args);
     }
 
 }

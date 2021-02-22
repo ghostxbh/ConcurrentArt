@@ -7,9 +7,9 @@
 		<version>2.1.3.RELEASE</version>
 		<relativePath/>
 	</parent>
-    <groupId>com.uzyky</groupId>
-    <artifactId>Zk_Curator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.uzykj</groupId>
+    <artifactId>uzy-practice-distributed</artifactId>
+    <version>1.0.0</version>
 	<properties>
         <java.version>1.8</java.version>
         <curator.version>2.12.0</curator.version>

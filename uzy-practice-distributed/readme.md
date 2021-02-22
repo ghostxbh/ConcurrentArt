@@ -1,4 +1,4 @@
-# Zk_Curator
+# uzy-practice-distributed
 
 ## 简介
 [@ZooKeeper百科](https://baike.baidu.com/item/zookeeper)
@@ -7,7 +7,7 @@ ZooKeeper是一个分布式的，开放源码的分布式应用程序协调服�
 
 如下图所示：
 
-![[zk]](./src/main/resources/static/zookeeper.png)
+![zk](src/main/resources/static/zookeeper.png)
 
 每个子目录项如 NameService 都被称作为 znode(目录节点)，和文件系统一样，我们能够自由的增加、删除znode，在一个znode下增加、删除子znode，唯一的不同在于znode是可以存储数据的。
 

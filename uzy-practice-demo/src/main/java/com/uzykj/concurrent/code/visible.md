@@ -9,7 +9,7 @@
 
 ### 代码示例：
 
-> 源码传送门 => [visible](../Concurrent/src/com/uzykj/problem/visible/VisibleTest.java)
+> 源码传送门 => [visible](lesson04/VisibleTest.java)
 
 + 共享变量
 ```

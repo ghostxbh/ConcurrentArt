@@ -41,7 +41,7 @@ public class RunnableTest implements Runnable {
     }
 }
 ```
-> 代码执行传送门[Demo](../Concurrent/src/com/uzykj/action/RunnableTest.java)
+> 代码执行传送门[Demo](lesson01/RunnableTest.java)
 
 ### 1.2 输出
 ```
@@ -59,7 +59,7 @@ Thread-2----7
 ### 1.3 执行过程
 
 此处代码执行过程如下图所示
-![[线程安全]](../Concurrent/src/resource/images/thread_security.png)
+![线程安全](http://file.uzykj.com/thread_security.png)
 
 共开启了3个线程执行任务(不考虑main主线程)，每一个线程都有3个任务：
 

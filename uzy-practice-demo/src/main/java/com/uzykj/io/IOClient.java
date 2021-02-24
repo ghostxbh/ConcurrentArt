@@ -1,4 +1,4 @@
-package com.uzykj.io.bio;
+package com.uzykj.io;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,10 +10,10 @@ import java.net.Socket;
 /**
  * @author ghostxbh
  * @date 2021/2/22
- * @description BIO客户端
+ * @description IO客户端
  */
 @Slf4j
-public class BIOClient {
+public class IOClient {
     private static final String HOST = "localhost";
     private static final int PORT = 8080;
 

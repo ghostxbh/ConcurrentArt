@@ -1,4 +1,4 @@
-package com.uzykj.dp.proxy.owner;
+package com.uzykj.design.pattern.proxy.owner;
 
 /**
  * @author ghostxbh

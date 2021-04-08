@@ -1,6 +1,6 @@
-package com.uzykj.dp.proxy.dynamic;
+package com.uzykj.design.pattern.proxy.dynamic;
 
-import com.uzykj.dp.proxy.owner.HouseOwner;
+import com.uzykj.design.pattern.proxy.owner.HouseOwner;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

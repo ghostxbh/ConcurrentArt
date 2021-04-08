@@ -1,6 +1,6 @@
-package com.uzykj.dp.proxy.agency;
+package com.uzykj.design.pattern.proxy.agency;
 
-import com.uzykj.dp.proxy.owner.HouseOwner;
+import com.uzykj.design.pattern.proxy.owner.HouseOwner;
 
 import java.util.logging.Logger;
 

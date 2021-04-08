@@ -41,10 +41,10 @@ public static void leaseByAgencyForJdk() {
     InvocationHandler proxyHandler = new HouseAgencyForJdk(houseOwner);
 
     // 代理对象
-    HouseOwner com.uzykj.dp.proxy = (HouseOwner) Proxy.newProxyInstance(classLoader, classes, proxyHandler);
+    HouseOwner com.uzykj.design.proxy = (HouseOwner) Proxy.newProxyInstance(classLoader, classes, proxyHandler);
 
     // 代理售房
-    com.uzykj.dp.proxy.leaseHouse();
+    com.uzykj.design.proxy.leaseHouse();
 
 }
 ```
@@ -52,7 +52,7 @@ public static void leaseByAgencyForJdk() {
 + [Cglib](proxy/dynamic/HouseAgencyForCglib.java)
 ```
 /**
- * JDK通过`org.springframework.cglib.com.uzykj.dp.proxy.Enhancer`类能够实现动态代理，其主要流程如下：
+ * JDK通过`org.springframework.cglib.com.uzykj.design.proxy.Enhancer`类能够实现动态代理，其主要流程如下：
  * <p>
  * 实现`MethodInterceptor`接口，自定义自己需要的方法解释器：`methodInterceptor`。
  * 创建CGLIB增强型代理类：`enhancer`。

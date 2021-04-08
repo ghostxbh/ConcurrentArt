@@ -1,10 +1,10 @@
-package com.uzykj.dp.proxy;
+package com.uzykj.design.pattern.proxy;
 
-import com.uzykj.dp.proxy.agency.HouseAgency;
-import com.uzykj.dp.proxy.dynamic.HouseAgencyForCglib;
-import com.uzykj.dp.proxy.dynamic.HouseAgencyForJdk;
-import com.uzykj.dp.proxy.owner.HouseOwner;
-import com.uzykj.dp.proxy.owner.HouseOwnerImpl;
+import com.uzykj.design.pattern.proxy.agency.HouseAgency;
+import com.uzykj.design.pattern.proxy.dynamic.HouseAgencyForCglib;
+import com.uzykj.design.pattern.proxy.dynamic.HouseAgencyForJdk;
+import com.uzykj.design.pattern.proxy.owner.HouseOwner;
+import com.uzykj.design.pattern.proxy.owner.HouseOwnerImpl;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 

@@ -1,6 +1,6 @@
-package com.uzykj.dp.proxy.dynamic;
+package com.uzykj.design.pattern.proxy.dynamic;
 
-import com.uzykj.dp.proxy.owner.HouseOwner;
+import com.uzykj.design.pattern.proxy.owner.HouseOwner;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 

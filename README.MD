@@ -9,7 +9,7 @@
 
 - [并发](uzy-practice-demo/src/main/java/com/uzykj/concurrent/readme.md)
 
-- [设计模式](uzy-practice-demo/src/main/java/com/uzykj/dp/readme.md)
+- [设计模式](uzy-practice-demo/src/main/java/com/uzykj/design/pattern/readme.md)
 
 - [IO](uzy-practice-demo/src/main/java/com/uzykj/io/readme.md)
 

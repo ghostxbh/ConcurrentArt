@@ -20,7 +20,7 @@
 ### 3.多线程
 + (1).[多线程安全](code/thread_security.md)
 + (2).[线程常用方法](code/thread_method.md)
-+ (3).[sleep&wait](code/sleep_and_wait.md)
++ (3).[sleep&wait](code/)
 
 
 ## 谢鸣
